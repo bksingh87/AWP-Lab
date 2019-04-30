@@ -1,0 +1,131 @@
+Experiment 3:
+Develop and demonstrate a XHTML file that includes Javascript script that uses functions for the following
+problems:
+
+a) Parameter: A string
+Output: The position in the string of the left-most vowel
+
+b) Parameter: A number
+Output: The number with its digits in the reverse order
+
+Objective :-
+To get acquainted with javascript procedures and usage of regular expressions in javascript.
+
+Proceedure :-
+
+Question 3a :-
+1. Declare the script tag as text/javascript in the beginning of the <body> of html program
+2. Get the string from the user using prompt()
+3. Validate input string (should be only alphabets, a - z) using the regular expression “ /^[a-zA-Z]+$/ “
+and alert the user for invalid input using alert()
+4. Convert the string to lowercase using toLowerCase()
+5.Use indexOf(<vowel>) for each vowel to get the position of the vowel in the string.
+6. Print the leftmost vowel i.e., print the lowest index got from indexof()
+
+
+
+<!--
+------------------------------------------------------------XHTML CODE--------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+
+<head> <title> Left most vowel </title> </head>
+<body>
+<script type="text/javascript">
+ 
+function disp(str)
+{
+ 
+
+
+var reg=/^[a-zA-Z]+$/ 
+if(!str.value.match(reg))
+{ 
+
+
+}
+var i,b
+ 
+alert("Enter alphabets only!")
+return false 
+b=str.value for(i=0;i<str.value.length;i++)
+{
+switch(b[i])
+{
+case "a": 
+
+
+case "A": case "e": case "E": case "i": case "I": case "o": case "O": case "u":
+case "U":alert( "\'"+b[i]+"\' is the first vowel found in postion "+(i+1));
+exit(0);
+default: break;
+}
+}
+if(i>=str.value.length) alert("No vowels found. :(")
+}
+
+</script>
+<form action="">
+<h2> Finding the left most Vowel </h2>
+<p>
+String: <input type="text" name="str" />
+<input type="button" value="Find" onclick="disp(str)" />
+</p>
+</form>
+
+</body>
+</html>
+
+<!-- End of File -->
+
+Question 3b :-
+1. Declare the script tag as text/javascript in the beginning of the <body> of html program
+2. Get the number to be reversed from the user using prompt()
+3. Validate input number (should be a positive number between 0 to 9) using the regular expression “
+/^[0-9]+$/ “ and alert the user for invalid input using alert()
+4. Reverse the number using modulus operation.
+5. Use math.floor(number/10) to get the floor of number after division (used for reversing)
+6. Display the reversed string using alert()
+
+<!--
+------------------------------------------------------------XHTML CODE--------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head> <title>Number reversal</title> </head>
+<body>
+<h1>Printing digits  in reverse order</h1>
+<script type="text/javascript">
+
+function disp(str)
+{ 
+
+
+var n=0,r=0,res=0 n=str.value
+if( n>0  || n==0 )
+{
+while(n!=0)
+{ r=n%10 n=Math.floor(n/10) res=res*10+r
+}
+alert("The reverse of the number is: "+res)
+}
+else alert("Enter a valid number")
+}
+
+</script>
+<form>
+<p>
+Number: <input type="text" name="str" />
+<input type="button" value="Find" onclick="disp(str)" />
+</p>
+</form>
+</body>
+</html>
+
+<!-- End of 
