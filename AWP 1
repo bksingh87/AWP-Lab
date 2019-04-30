@@ -1,0 +1,92 @@
+Experiment 1:
+Develop and demonstrate a XHTML document that illustrates the use external style sheet, ordered list, table,
+borders, padding, color, and the <span> tag.
+
+
+Objective: - To learn how to create a simple web page using html along with the usage of st yle sheets, lists, creation or tables with borders, padding and colors.
+
+Procedure:-
+
+1. Open a new file using Notepad.
+
+2. Rename the file as pgm1.html (Extension for html programs is .html)
+
+3. Create a file (external cascading st yle sheet) by name Lab1.css where the font, size, colors etc.. are specified. The st yle type should be set to “text/css” under the <head> tag.
+
+
+4. The pgm1.css file should be included in pgm1.html file in the <link href ….> tag
+
+5. In the <body> tag of the html document. Create an Ordered list using <ol> tag. Also create sublists under the main list as shown below:
+
+1. Dept of CSE
+i. I Sem
+ii. III Sem iii. V Sem iv. VII Sem
+
+2. Dept of ISE
+i. I Sem
+ii. III Sem
+iii. V Sem iv. VII Sem
+
+6. Create a Table which shows the Room No of the class/section and the strength of the students in each class/section of the departments, CSE and ISE.
+
+7. Fill the table using an appropriate colour and specify the thickness of the border for the table.
+
+8. Make the website neat and attractive with relevant text and pictures
+9. Use suitable tags wherever necessary. 
+
+
+/*----------------------------------Basics.css-------------------------------------*/
+
+body    { background-color:white; }
+table  { border: 2px solid; padding: 0px; }
+th     { border: 1px solid blue; padding:8px; }
+td     { border: 1px solid blue; padding:8px; }
+ol     { font-size:80%; list-style:lower-roman; }
+span   { background-color:#grey; font-size:120%; font-style:italic; }
+p      { font-size:90%; }
+
+/* End of File */
+
+<!--
+------------------------------------------------------------XHTML CODE--------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" type="text/css" href="Basics.css" />
+<title> CSS Basics </title>
+</head>
+
+<body>
+<h1> This header is 36 pt </h1>
+<h2> This header is black </h2>
+<p> This paragraph has a left margin of 50 pixels </p>
+
+<table>
+<tr>
+<th> Name </th>
+<th> Email </th>
+<th> Phone number </th>
+</tr>
+
+<tr>
+<td>  Xyz </td>
+<td>  xyz@abc.com </td>
+<td>  12345 </td>
+</tr>
+
+<tr>
+<td>  Qwerty </td>
+<td>  qwerty@poi.com </td>
+<td>  987654  </td>
+</tr>
+
+<tr>
+<td>  Zaqwsx </td>
+<td>  zaqwsx@mnbv.co.uk </td>
+<td>  78563 </td>
+</tr>
+</table> 
