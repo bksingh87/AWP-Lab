@@ -1,0 +1,113 @@
+Experiment 6 :
+a) Design an XML document to store information about a student in an engineering college affiliated to VTU.
+The information must include USN, Name, Name of the College, Brach, Year of Joining, and e-mail id. Make up sample data for 3 students. Create a CSS style sheet and use it to display the document.
+
+/* -------------------------------------Info.css---------------------------------*/
+
+stud-info { display:block; color:blue; font-style:italic; font-size:200%; }
+student { display:block; font-size:100%; }
+stud1 { display:block; color:blue; }
+stud2  { display:block; color:red; }
+stud3  { display:block; color:black; } usn,name,nov,branch,you,did { display:block; }
+
+/* End of File */
+
+<!--
+-------------------------------------------------------------------XML File----------------------------------------------------
+-->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="Info.css" type="text/css"?>
+
+<student>
+<stud-info>Student Information</stud-info>
+<stud1>
+<usn>USN: 1PE08CS009</usn>
+<name>Name: Aashish S</name>
+<noc>College: PES School of Engineering</noc>
+<branch>Branch: Computer Science and Engineering</branch>
+<yoj>Year: 2012</yoj>
+<eid>Email: aashishh@me.com</eid>
+</stud1>
+<br/>
+<stud2>
+<usn>USN: 1PE08CS001</usn>
+<name>Name: Anish L R</name>
+<noc>College: PES School of Engineering</noc>
+<branch>Branch: Computer Science and Engineering</branch>
+<yoj>Year: 2012</yoj>
+<eid>Email: anishh@me.com</eid>
+</stud2>
+<br/>
+<stud3>
+<usn>USN: 1PE08CS006</usn>
+<name>Name: Amal Antony</name>
+<noc>College: PES School of Engineering</noc>
+<branch>Branch: Computer Science and Engineering</branch>
+<yoj>Year: 2012</yoj>
+<eid>Email: amal@me.com</eid>
+</stud3> </student>
+<!-- End of file --> 
+
+
+b) Create an XSLT style sheet for one student element of the above document and use it to create a display of that element.
+
+<!--
+-------------------------------------------------------------------XML File----------------------------------------------------
+-->
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="6B - XSLT Student Info.xsl"?>
+ 
+<VTU>
+ 
+
+<USN> 1PE08CS020 </USN>
+<name> John Doe </name>
+<college> PES School of Engineering </college>
+<branch> CSE </branch>
+<YOJ> 2008 </YOJ>
+<email> John@me.com </email> 
+</VTU>
+ 
+
+<!-- End of file --> 
+
+
+Experiment 7 :
+a) Write a Perl program to display various Server Information like Server Name, Server Software, Server
+protocol, CGI Revision etc.
+
+<!--
+-------------------------------------------------------------------XHTML File----------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Server Information</title>
+</head>
+<body>
+<form action="/cgi-bin/7A - Server Info.cgi" method="post">
+<p>
+Server Information Display Program
+<input type="submit" value="Click here" />
+</p> </form>
+</body>
+</html>
+<!-- End of file -->
+
+
+--------------------------------------------------------------Perl Script---------------------------------------------------------------
+
+#!/usr/bin/perl
+
+# Question 7A
+# Write a Perl program to display various Server Information like Server Name, Server
+# Software, Server protocol, CGI Revision etc.
+
+use CGI':standard';
+print "content-type:text/html \n\n";
+print "Server Name: $ENV{'SERVER_NAME'} <br/>";
+print "Server Port: $ENV{'SERVER_PORT'} <br/>";
+print "Server Software: $ENV{'SERVER_SOFTWARE'} <br/>"; print "Server Protocol:
+$ENV{'SERVER_PROTOCOL'} <br/>"; print "CGI VERSION: $ENV{'GATEWAY_INTERFACE'} <br />";
