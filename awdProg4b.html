@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head> <title>USN and Semester Validation</title> </head>
+<body>
+<script type="text/javascript">
+function disp(usn,sem)
+{
+var pattern1=/^[1-4][A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/
+if(!usn.value.match(pattern1)||usn.value.length==0)
+{
+alert("Invalid USN!\nEnter a valid USN")
+return false
+}
+else  
+alert("USN valid!") 
+var pattern2=/^[1-8]$/
+if(!sem.value.match(pattern2)||sem.value.length==0)
+{ 
+    alert("Invalid Semester!\nEnter a valid Semester")
+return false
+}
+
+else  alert("Semester valid!")
+}
+</script>
+ 
+ 
+<form action="">
+<p>
+USN: <input type="text" name="usn" /> <br/> Semester: <input type="text" name="sem" /> <br/>
+<input type="button" value="Validate" onclick="disp(usn,sem)" />
+</p>
+</form>
+</body>
+</html>
