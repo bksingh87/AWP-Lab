@@ -1,0 +1,97 @@
+Experiment 9 :
+Write a Perl program to display a digital clock which displays the current time of the server.
+
+<!--
+-------------------------------------------------------------XHTML File---------------------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Digital Clock Display Program</title>
+</head>
+
+<body>
+<form action="/cgi-bin/9 - Digital Clock.cgi" method="post">
+<p>
+Digital Clock <input type="submit" value="Click Here" />
+</p>
+</form>
+</body>
+ 
+</html>
+ 
+
+<!-- End of file --> 
+
+--------------------------------------------------------------Perl Script---------------------------------------------------------------
+
+#!/usr/bin/perl
+
+# Question 9
+# Implementing a Digital Clock
+
+use CGI':standard';
+print "refresh:1 \n"; ($s,$m,$h)=localtime(time);
+print "content-type:text/html \n\n";
+print "The system  time is $h:$m:$s", "<br>"; print "In words $h hours $m minutes $s seconds";
+
+# -----------------------------------------------------------End of Perl Script-------------------------------------------------------- 
+
+
+Experiment 10 :
+Write a Perl program to insert name and age information entered by the user into a table created using MySQL
+and to display the current contents of this table.
+
+<!--
+-------------------------------------------------------------XHTML File---------------------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Perl Database Interfaces</title>
+</head>
+<body>
+<form action="/cgi-bin/10 - Perl DBI.cgi"  method="post">
+<p>
+<b>Enter Your Information</b> <br />
+Name: <input type="text" name="name" /> <br /> Age: <input type="text" name="age" /> <br />
+<input type="submit" value="Add" />
+<input type="reset" value="Clear" />
+</p> </form>
+</body>
+</html>
+
+<!-- End of HTML file -->
+
+--------------------------------------------------------------Perl Script---------------------------------------------------------------
+
+#!/usr/bin/perl
+
+# Question 10
+# Write a Perl program to insert name and age information entered by
+# the user into a table created using MySQL and
+# to display the current contents of this table.
+
+use CGI':standard';
+print "content-type:text/html\n\n";
+
+#use lib '/Applications/XAMPP/xamppfiles/lib/perl5/site_perl/5.10.1/darwin-2level';
+use DBI;
+
+$dbh  = DBI->connect("DBI:mysql:Temp","root");
+$name=param("name");
+$age=param("age");
+$sql="insert into Students values ('$name','$age')";
+$sth=$dbh->prepare("$sql");
+$sth->execute;
+$sql = "select * from Students";
+$sth  = $dbh->prepare($sql);
+$sth->execute;
+
+print "<table border size=1> 
