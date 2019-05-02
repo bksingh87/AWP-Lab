@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="6B - XSLT Student Info.xsl"?>
+ 
+<VTU>
+<USN> 1PE08CS020 </USN>
+<name> John Doe </name>
+<college> PES School of Engineering </college>
+<branch> CSE </branch>
+<YOJ> 2008 </YOJ>
+<email> John@me.com </email> 
+</VTU>
