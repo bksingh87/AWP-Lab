@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Stack</title>
+<script type="text/javascript">
+var top='p3';
+function toTop(newTop)
+{ 
+domTop=document.getElementById(top).style domNew=document.getElementById(newTop).style domTop.zIndex="0";
+domNew.zIndex="10";
+top=newTop;
+}
+</script>
+<style type="text/css">
+
+.para1{position:absolute;top:10;left:120;z-index:0;
+border:solid;padding:80; width:300;background-color:aqua;}
+.para2{position:absolute;top:50;left:150;z-index:0;
+border:solid;padding:80; width:300;background-color:yellow; }
+.para3{position:absolute;top:100;left:180;z-index:0;
+border:solid;padding:80; width:300;background-color:red; }
+</style>
+</head>
+
+<body>
+<p class="para1" id="p1" onmouseover="toTop('p1')"> Frame One </p>
+<p class="para2" id="p2"  onmouseover="toTop('p2')"> Frame Three </p>
+<p class="para3" id="p3" onmouseover="toTop('p3')"> Frame Two  </p>
+
+</body>
+</html>
