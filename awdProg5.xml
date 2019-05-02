@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="Info.css" type="text/css"?>
+
+<student>
+<stud-info>Student Information</stud-info>
+<stud1>
+<usn>USN: 1PE08CS009</usn>
+<name>Name: Aashish S</name>
+<noc>College: PES School of Engineering</noc>
+<branch>Branch: Computer Science and Engineering</branch>
+<yoj>Year: 2012</yoj>
+<eid>Email: aashishh@me.com</eid>
+</stud1>
+<br/>
+<stud2>
+<usn>USN: 1PE08CS001</usn>
+<name>Name: Anish L R</name>
+<noc>College: PES School of Engineering</noc>
+<branch>Branch: Computer Science and Engineering</branch>
+<yoj>Year: 2012</yoj>
+<eid>Email: anishh@me.com</eid>
+</stud2>
+<br/>
+<stud3>
+<usn>USN: 1PE08CS006</usn>
+<name>Name: Amal Antony</name>
+<noc>College: PES School of Engineering</noc>
+<branch>Branch: Computer Science and Engineering</branch>
+<yoj>Year: 2012</yoj>
+<eid>Email: amal@me.com</eid>
+</stud3> </student>

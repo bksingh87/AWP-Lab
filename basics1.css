@@ -1,0 +1,7 @@
+body    { background-color:white; }
+table  { border: 2px solid; padding: 0px; }
+th     { border: 1px solid blue; padding:8px; }
+td     { border: 1px solid blue; padding:8px; }
+ol     { font-size:80%; list-style:lower-roman; }
+span   { background-color:#grey; font-size:120%; font-style:italic; }
+p      { font-size:90%; }

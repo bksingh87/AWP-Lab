@@ -1,0 +1,90 @@
+Experiment 8 :
+a)         Write a Perl program to accept the User Name and display a greeting message randomly chosen from a
+list of 4 greeting messages.
+
+<!--
+-------------------------------------------------------------XHTML File---------------------------------------------------------------
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head> <title>Accept user name</title> </head>
+<body>
+<form action ="/cgi-bin/8A - Greetings.cgi" method="post">
+<p> Username: <input type="text" name="username" />
+<input type="submit" value="OK" /> </p>
+</form>
+</body>
+</html>
+<!-- End of file -->
+
+--------------------------------------------------------------Perl Script---------------------------------------------------------------
+
+#!/usr/bin/perl
+
+# Question 8A
+# Write a Perl program to accept the User Name and display a greeting message
+# randomly chosen from a list of 4 greeting messages.
+
+use CGI':standard';
+print "content-type:text/html\n\n";
+$input=param("username");
+my @msgs=("Good morning","Welcome","How are you doing?","Hello!");
+$i=int rand scalar @msgs;
+print "Hi, $input.<br>Message: " , $msgs [$i];
+
+# -----------------------------------------------------------End of Perl Script--------------------------------------------------------
+
+
+
+b) Write a Perl program to keep track of the number of visitors visiting the web page and to display this count of visitors, with proper headings.
+
+<!--
+-------------------------------------------------------------XHTML File---------------------------------------------------------------
+-->
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head> <title>Counting No. Of Visits to this Pageâ€¦</title> </head>
+<body>
+<form action="/cgi-bin/8B - View Count.cgi" method="post">
+<p> Number of Visits to this page
+<input type="submit" value="Click Here" /> </p> 
+
+ 
+</form>
+</body>
+</html>
+ 
+
+
+
+
+<!-- End of file --> 
+
+--------------------------------------------------------------Perl Script---------------------------------------------------------------
+
+#!/usr/bin/perl
+
+# Question 8B
+# Write a Perl program to keep track of the number of visitors visiting the web page
+# and to display this count of visitors, with proper headings.
+
+use CGI':standard';
+print "content-type:text/html \n\n";
+
+# Requires a file 'count.dat' to pre-exist with the content '0' open FILE, "<count.dat";
+my $count = <FILE>;
+close(FILE);
+$count++;
+
+open Handler, ">count.dat";
+print Handler $count ;
+close Handler;
+
+open FILE, "<count.dat"; my $count2 = <FILE>; close(FILE);
+
+
+print b("This page has been viewed $count times");
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Fibonacci Numbers </title>
+</head>
+<body>
+<h1>Calculating the fibonacci numbers</h1>
+<script type="text/javascript">
+
+var n,a=0,b=1,i,c 
+n=prompt("Enter a number ","") 
+if(n<=0) alert("Invalid number") 
+else
+{
+if(n==1)  document.write(a)
+else     document.write(a+"<br />"+b)
+for(i=2;i<n;i++)
+{
+c=a+b 
+a=b 
+b=c
+document.write("<br />"+c)
+}
+}
+</script>
+
+</body>
+</html>
