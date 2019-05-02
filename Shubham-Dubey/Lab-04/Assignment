@@ -1,0 +1,29 @@
+Experiment 4:-
+a) Develop and demonstrate, using Javascript script, a XHTML document that collects the USN ( the valid
+format is: A digit from 1 to 4 followed by two upper-case characters followed by two digits followed by two upper-case characters followed by three digits; no embedded spaces allowed) of the user. Event handler must be included for the form element that collects this information to validate the input. Messages in the alert windows must be produced when errors are detected.
+
+b) Modify the above program to get the current semester also (restricted to be a number from 1 to 8)
+
+Objective :-
+To write functions in html, validate using regular expressions.
+
+Proceedure :- Question 4a :-
+1. Declare the script tag as text/javascript in the beginning of the <body> of html program
+2. Get the USN from the user using prompt()
+3. Validate USN input by the user using the regular expression : /[1-4][A-Z][A-Z][0-9][0-9][A-Z][A- Z][0-9][0-9][0-9]$/
+4. If the USN format is correct, alert the user with a message, else alert the user with the format DAADDAADDD (for eg: 1PE09CS001)
+
+Proceedure :- Question 4b :-
+1. Declare the script tag as text/javascript in the beginning of the <body> of html pr ogram
+2. Get the USN and Semester from the user using prompt()
+3. Validate USN input by the user using the regular expression : /[1-4][A-Z][A-Z][0-9][0-9][A-Z][A- Z][0-9][0-9][0-9]$/
+4. If the USN format is correct, alert the user with a message, else alert  the user with the format
+DAADDAADDD (for eg: 1PE09CS001)
+5. Validate Semester by the user using the regular expression : /[1-8]$/
+6. If the Semester is correct, alert the user with a message, else alert the user with the valid semester number (1 – 8).
+
+====
+
+Experiment 5 :
+a) Develop and demonstrate, using JavaScript script, a XHTML document that contains three short paragraphs of
+text, stacked on top of each other, with only enough of each showing so that the mouse cursor can be placed over some part of them. When the cursor is placed over the exposed part of any paragraph, it should rise to the top to become completely visible.
