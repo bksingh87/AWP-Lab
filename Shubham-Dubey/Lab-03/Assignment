@@ -1,0 +1,32 @@
+Experiment 3:
+Develop and demonstrate a XHTML file that includes Javascript script that uses functions for the following
+problems:
+
+a) Parameter: A string
+Output: The position in the string of the left-most vowel
+
+b) Parameter: A number
+Output: The number with its digits in the reverse order
+
+Objective :-
+To get acquainted with javascript procedures and usage of regular expressions in javascript.
+
+Proceedure :-
+
+Question 3a :-
+1. Declare the script tag as text/javascript in the beginning of the <body> of html program
+2. Get the string from the user using prompt()
+3. Validate input string (should be only alphabets, a - z) using the regular expression “ /^[a-zA-Z]+$/ “
+and alert the user for invalid input using alert()
+4. Convert the string to lowercase using toLowerCase()
+5.Use indexOf(<vowel>) for each vowel to get the position of the vowel in the string.
+6. Print the leftmost vowel i.e., print the lowest index got from indexof()
+
+Question 3b :-
+1. Declare the script tag as text/javascript in the beginning of the <body> of html program
+2. Get the number to be reversed from the user using prompt()
+3. Validate input number (should be a positive number between 0 to 9) using the regular expression “
+/^[0-9]+$/ “ and alert the user for invalid input using alert()
+4. Reverse the number using modulus operation.
+5. Use math.floor(number/10) to get the floor of number after division (used for reversing)
+6. Display the reversed string using alert()
