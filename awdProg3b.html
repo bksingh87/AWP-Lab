@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head> <title>Number reversal</title> </head>
+<body>
+<h1>Printing digits  in reverse order</h1>
+<script type="text/javascript">
+
+function disp(str)
+{ 
+var n=0,r=0,res=0 
+n=str.value
+if( n>0  || n==0 )
+{
+while(n!=0)
+{ 
+    r=n%10 
+    n=Math.floor(n/10) 
+    res=res*10+r
+}
+alert("The reverse of the number is: "+res)
+}
+else alert("Enter a valid number")
+}
+
+</script>
+<form>
+<p>
+Number: <input type="text" name="str" />
+<input type="button" value="Find" onclick="disp(str)" />
+</p>
+</form>
+</body>
+</html>
